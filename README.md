@@ -34,6 +34,11 @@ npm run typecheck
 npm test
 ```
 
+## Team Review
+
+- MVP Review Checklist: `docs/review/iteration-0-mvp-review.md`
+- Iteration 1 Candidates: `docs/backlog/iteration-1-candidates.md`
+
 ## Getting Started
 
 First, run the development server:
