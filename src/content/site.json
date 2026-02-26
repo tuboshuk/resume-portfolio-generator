@@ -1,0 +1,65 @@
+{
+  "name": "土拨鼠",
+  "title": "后端工程师 / AI 应用工程",
+  "location": "Shanghai, CN",
+  "tagline": "把复杂系统做稳定，把工具做成可复制资产。",
+  "description": "一个配置驱动的简历/作品集静态站点模板：填写资料 → 本地预览 → 一键构建部署。",
+  "avatarUrl": "https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=professional%20headshot%20illustration%2C%20clean%20minimal%20vector%20portrait%2C%20soft%20lighting%2C%20dark%20background%2C%20modern%20tech%20aesthetic%2C%20high%20detail%2C%20sharp%20lines%2C%20calm%20expression%2C%20center%20composition&image_size=square",
+  "email": "your.email@example.com",
+  "resumeHref": "https://github.com/tuboshuk/resume",
+  "socials": [
+    { "label": "GitHub", "href": "https://github.com/tuboshuk" },
+    { "label": "Blog", "href": "https://github.com/tuboshuk" }
+  ],
+  "highlights": [
+    {
+      "title": "工程化交付",
+      "desc": "把需求拆到可验收，产出文档、代码与可回滚方案。"
+    },
+    {
+      "title": "稳定性治理",
+      "desc": "限流、降级、重试、可观测性与链路排障。"
+    },
+    {
+      "title": "AI 应用落地",
+      "desc": "面向企业协作场景的 Bot、流程与自动化集成。"
+    }
+  ],
+  "skills": [
+    {
+      "group": "Backend",
+      "items": ["Go", "Java", "MySQL", "Redis", "Kafka", "Observability"]
+    },
+    {
+      "group": "Frontend",
+      "items": ["React", "TypeScript", "Next.js", "Tailwind"]
+    },
+    {
+      "group": "Product",
+      "items": ["SOP", "系统设计", "需求澄清", "交付与复盘"]
+    }
+  ],
+  "experience": [
+    {
+      "title": "后端工程师",
+      "org": "ByteDance / Feishu",
+      "period": "2024 - Now",
+      "bullets": [
+        "负责飞书机器人与协作平台的集成落地与稳定性治理",
+        "推进多条端到端交付：从需求澄清到上线闭环",
+        "沉淀可复用的自动化工具与工程模板"
+      ]
+    },
+    {
+      "title": "后端工程师",
+      "org": "GlorySoft",
+      "period": "2021 - 2024",
+      "bullets": [
+        "参与制造业 MES 系统开发与现场联调",
+        "负责权限与复杂业务流程的工程实现"
+      ]
+    }
+  ],
+  "featuredProjectSlugs": ["resume-portfolio-generator", "feishu-bot-notifier", "worklog-digest"]
+}
+
