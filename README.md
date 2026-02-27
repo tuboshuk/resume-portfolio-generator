@@ -18,6 +18,20 @@ npm run dev
 
 你只需要改这两个文件，就能生成属于你的站点。
 
+### Anchor IDs (URL #hash)
+
+首页导航使用锚点滚动，默认会显示 `/#skills` 这种地址，这是页面 section 的 `id`。你可以在 `src/content/site.json` 里用 `anchors` 自定义：
+
+```json
+{
+  "anchors": {
+    "skills": "abilities",
+    "experience": "timeline",
+    "contact": "contact"
+  }
+}
+```
+
 ## Build (Static Export)
 
 ```bash

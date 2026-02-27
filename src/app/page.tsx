@@ -9,6 +9,11 @@ import { getFeaturedProjects, site } from "@/lib/content";
 
 export default function Home() {
   const featured = getFeaturedProjects();
+  const anchors = {
+    skills: site.anchors?.skills ?? "skills",
+    experience: site.anchors?.experience ?? "experience",
+    contact: site.anchors?.contact ?? "contact",
+  };
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-50">
@@ -89,7 +94,7 @@ export default function Home() {
           </Container>
         </section>
 
-        <section id="skills" className="border-b border-white/10">
+        <section id={anchors.skills} className="border-b border-white/10">
           <Container className="py-14 sm:py-16">
             <div className="flex items-end justify-between gap-6">
               <div>
@@ -135,7 +140,7 @@ export default function Home() {
           </Container>
         </section>
 
-        <section id="experience" className="border-b border-white/10">
+        <section id={anchors.experience} className="border-b border-white/10">
           <Container className="py-14 sm:py-16">
             <h2 className="text-2xl font-semibold">经历</h2>
             <div className="mt-8 grid gap-4">
@@ -189,7 +194,7 @@ export default function Home() {
           </Container>
         </section>
 
-        <section id="contact">
+        <section id={anchors.contact}>
           <Container className="py-14 sm:py-16">
             <div className="rounded-3xl border border-white/10 bg-gradient-to-tr from-white/8 via-white/5 to-transparent p-7 sm:p-10">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">

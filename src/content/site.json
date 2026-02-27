@@ -7,6 +7,11 @@
   "avatarUrl": "https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=professional%20headshot%20illustration%2C%20clean%20minimal%20vector%20portrait%2C%20soft%20lighting%2C%20dark%20background%2C%20modern%20tech%20aesthetic%2C%20high%20detail%2C%20sharp%20lines%2C%20calm%20expression%2C%20center%20composition&image_size=square",
   "email": "your.email@example.com",
   "resumeHref": "https://github.com/tuboshuk/resume",
+  "anchors": {
+    "skills": "skills",
+    "experience": "experience",
+    "contact": "contact"
+  },
   "socials": [
     { "label": "GitHub", "href": "https://github.com/tuboshuk" },
     { "label": "Blog", "href": "https://github.com/tuboshuk" }
@@ -62,4 +67,3 @@
   ],
   "featuredProjectSlugs": ["resume-portfolio-generator", "feishu-bot-notifier", "worklog-digest"]
 }
-

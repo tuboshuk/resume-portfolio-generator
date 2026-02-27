@@ -20,6 +20,12 @@ export type SiteSocial = {
   href: string;
 };
 
+export type SiteAnchors = {
+  skills?: string;
+  experience?: string;
+  contact?: string;
+};
+
 export type SiteConfig = {
   name: string;
   title: string;
@@ -29,6 +35,7 @@ export type SiteConfig = {
   avatarUrl: string;
   email: string;
   resumeHref: string;
+  anchors?: SiteAnchors;
   socials: SiteSocial[];
   highlights: SiteHighlight[];
   skills: SiteSkillGroup[];
@@ -61,4 +68,3 @@ export type Project = {
   content: ProjectContent;
   gallery: string[];
 };
-

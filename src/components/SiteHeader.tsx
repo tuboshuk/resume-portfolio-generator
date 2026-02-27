@@ -5,6 +5,11 @@ import { site } from "@/lib/content";
 
 export function SiteHeader(props: { mode: "home" | "inner" }) {
   const anchor = (id: string) => (props.mode === "home" ? `#${id}` : `/#${id}`);
+  const anchors = {
+    skills: site.anchors?.skills ?? "skills",
+    experience: site.anchors?.experience ?? "experience",
+    contact: site.anchors?.contact ?? "contact",
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/80 backdrop-blur">
@@ -23,13 +28,13 @@ export function SiteHeader(props: { mode: "home" | "inner" }) {
         </Link>
 
         <nav className="flex items-center gap-3 text-sm text-white/80">
-          <a className="hover:text-white" href={anchor("skills")}>
+          <a className="hover:text-white" href={anchor(anchors.skills)}>
             技能
           </a>
-          <a className="hover:text-white" href={anchor("experience")}>
+          <a className="hover:text-white" href={anchor(anchors.experience)}>
             经历
           </a>
-          <a className="hover:text-white" href={anchor("contact")}>
+          <a className="hover:text-white" href={anchor(anchors.contact)}>
             联系
           </a>
           <Link
@@ -43,4 +48,3 @@ export function SiteHeader(props: { mode: "home" | "inner" }) {
     </header>
   );
 }
-
