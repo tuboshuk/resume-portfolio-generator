@@ -55,6 +55,21 @@ export type ProjectLink = {
   href: string;
 };
 
+export type LearningLink = {
+  label: string;
+  href: string;
+};
+
+export type LearningNote = {
+  slug: string;
+  title: string;
+  summary: string;
+  date: string;
+  tags: string[];
+  links: LearningLink[];
+  featured: boolean;
+};
+
 export type ProjectContent = {
   background: string;
   responsibilities: string[];

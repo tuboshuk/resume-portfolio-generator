@@ -43,6 +43,12 @@ export function SiteHeader(props: { mode: "home" | "inner" }) {
           >
             作品集
           </Link>
+          <Link
+            className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 font-semibold text-white hover:bg-white/10"
+            href="/learning"
+          >
+            学习
+          </Link>
         </nav>
       </Container>
     </header>

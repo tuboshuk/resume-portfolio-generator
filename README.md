@@ -15,6 +15,7 @@ npm run dev
 
 - 站点信息：`src/content/site.json`
 - 作品列表：`src/content/projects.json`
+- 学习记录：`src/content/learning.json`
 
 你只需要改这两个文件，就能生成属于你的站点。
 

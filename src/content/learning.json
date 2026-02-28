@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "how-to-write-a-good-resume",
+    "title": "如何写一份对面试官友好的简历",
+    "summary": "从信息结构、量化结果、排版与常见误区四个角度总结一份可复用的简历写作模板。",
+    "date": "2026-02-28",
+    "tags": ["求职", "简历"],
+    "links": [
+      { "label": "笔记", "href": "https://example.com" }
+    ],
+    "featured": true
+  },
+  {
+    "slug": "learning-plan-template",
+    "title": "学习计划怎么写：从目标到可执行任务",
+    "summary": "一个适合学生/新人使用的学习计划模板：目标、里程碑、每日任务、复盘方式。",
+    "date": "2026-02-20",
+    "tags": ["学习", "方法论"],
+    "links": [],
+    "featured": false
+  }
+]
+
