@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "@/components/Container";
 import { CopyButton } from "@/components/CopyButton";
 import { PrimaryLink } from "@/components/PrimaryLink";
@@ -116,7 +117,7 @@ export default function Home() {
           <Container className="py-14 sm:py-16">
             <div className="flex items-end justify-between gap-6">
               <div>
-                <h2 className="text-2xl font-semibold">技能与亮点</h2>
+                <h2 className="text-2xl font-semibold">{site.nav?.skills ?? "技能与亮点"}</h2>
                 <p className="mt-2 text-sm text-white/65">
                   用最短的话讲清楚我能解决什么问题。
                 </p>
@@ -160,12 +161,13 @@ export default function Home() {
 
         <section id={anchors.experience} className="border-b border-white/10">
           <Container className="py-14 sm:py-16">
-            <h2 className="text-2xl font-semibold">经历</h2>
+            <h2 className="text-2xl font-semibold">{site.nav?.experience ?? "经历"}</h2>
             <div className="mt-8 grid gap-4">
               {site.experience.map((e) => (
-                <div
-                  key={`${e.org}-${e.period}`}
-                  className="rounded-3xl border border-white/10 bg-white/5 p-6"
+                <Link
+                  key={e.slug}
+                  href={`/experience/${e.slug}`}
+                  className="block rounded-3xl border border-white/10 bg-white/5 p-6 transition-colors hover:bg-white/7"
                 >
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                     <div>
@@ -175,13 +177,13 @@ export default function Home() {
                     <div className="text-sm font-semibold text-white/55">{e.period}</div>
                   </div>
                   <ul className="mt-4 grid gap-2 text-sm text-white/70">
-                    {e.bullets.map((b) => (
+                    {(e.highlights?.length ? e.highlights : e.bullets).slice(0, 3).map((b) => (
                       <li key={b} className="leading-6">
                         · {b}
                       </li>
                     ))}
                   </ul>
-                </div>
+                </Link>
               ))}
             </div>
           </Container>
@@ -206,7 +208,7 @@ export default function Home() {
 
             <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {featured.slice(0, 6).map((p) => (
-                <ProjectCard key={p.slug} project={p} />
+                <ProjectCard key={p.slug} project={p} from="home" />
               ))}
             </div>
           </Container>
@@ -217,7 +219,7 @@ export default function Home() {
             <div className="rounded-3xl border border-white/10 bg-gradient-to-tr from-white/8 via-white/5 to-transparent p-7 sm:p-10">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                 <div>
-                  <h2 className="text-2xl font-semibold">联系我</h2>
+                  <h2 className="text-2xl font-semibold">{site.nav?.contact ?? "联系我"}</h2>
                   <p className="mt-2 text-sm text-white/65">
                     任何合作/机会都欢迎邮件沟通。
                   </p>

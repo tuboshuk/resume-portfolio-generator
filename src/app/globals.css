@@ -24,3 +24,21 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print,
+  header,
+  footer {
+    display: none !important;
+  }
+  main {
+    padding: 0 !important;
+  }
+  @page {
+    margin: 1in;
+  }
+}

@@ -78,6 +78,16 @@ npm run dev
 }
 ```
 
+## Sitemap
+
+站点地图 `sitemap.xml` 会在 `npm run build` 时自动生成。
+
+请修改 `src/app/sitemap.ts` 中的 `baseUrl` 为你的实际部署域名：
+
+```typescript
+const baseUrl = "https://your-portfolio-url.com";
+```
+
 ## Build (Static Export)
 
 ```bash

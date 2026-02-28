@@ -1,6 +1,8 @@
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/Container";
 import { PrimaryLink } from "@/components/PrimaryLink";
+import { ProjectBackButton } from "@/components/ProjectBackButton";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Tag } from "@/components/Tag";
@@ -12,8 +14,9 @@ export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
 }
 
-export default function ProjectDetailPage(props: { params: { slug: string } }) {
-  const p = getProjectBySlug(props.params.slug);
+export default async function ProjectDetailPage(props: { params: Promise<{ slug: string }> }) {
+  const { slug } = await props.params;
+  const p = getProjectBySlug(slug);
   if (!p) return notFound();
 
   return (
@@ -149,12 +152,18 @@ export default function ProjectDetailPage(props: { params: { slug: string } }) {
               <div className="h-fit rounded-3xl border border-white/10 bg-white/5 p-6">
                 <div className="text-xs font-semibold text-white/60">快速导航</div>
                 <div className="mt-4 grid gap-2">
-                  <PrimaryLink
-                    href="/projects"
-                    label="返回作品集"
-                    variant="secondary"
-                    className="w-full justify-center"
-                  />
+                  <Suspense
+                    fallback={
+                      <PrimaryLink
+                        href="/projects"
+                        label="返回作品集"
+                        variant="secondary"
+                        className="w-full justify-center"
+                      />
+                    }
+                  >
+                    <ProjectBackButton />
+                  </Suspense>
                 </div>
               </div>
             </div>
@@ -165,4 +174,3 @@ export default function ProjectDetailPage(props: { params: { slug: string } }) {
     </div>
   );
 }
-

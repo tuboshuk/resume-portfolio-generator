@@ -7,9 +7,7 @@
     "role": "Owner / Full-stack",
     "tags": ["Next.js", "TypeScript", "Tailwind", "Static Export"],
     "featured": true,
-    "links": [
-      { "label": "GitHub", "href": "https://github.com/tuboshuk/resume-portfolio-generator" }
-    ],
+    "links": [],
     "coverImageUrl": "https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=modern%20portfolio%20website%20mockup%2C%20dark%20theme%2C%20minimal%20UI%2C%20project%20cards%2C%20clean%20typography%2C%20high%20contrast%2C%20studio%20lighting%2C%20high%20detail&image_size=landscape_4_3",
     "content": {
       "background": "希望把作品集网站变成可售卖、可复制、可一键部署的模板。",
@@ -63,4 +61,3 @@
     "gallery": []
   }
 ]
-

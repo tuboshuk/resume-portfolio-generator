@@ -2,13 +2,14 @@
   "name": "土拨鼠",
   "title": "后端工程师 / AI 应用工程",
   "location": "Shanghai, CN",
-  "tagline": "把复杂系统做稳定，把工具做成可复制资产。",
-  "description": "一个配置驱动的简历/作品集静态站点模板：填写资料 → 本地预览 → 一键构建部署。",
+  "tagline": "从制造业现场到企业协作平台：能写业务也能抓稳定性。",
+  "description": "配置驱动的简历/作品集站点：内容可维护、结构可复用、支持静态导出与一键部署。",
   "avatarUrl": "https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=professional%20headshot%20illustration%2C%20clean%20minimal%20vector%20portrait%2C%20soft%20lighting%2C%20dark%20background%2C%20modern%20tech%20aesthetic%2C%20high%20detail%2C%20sharp%20lines%2C%20calm%20expression%2C%20center%20composition&image_size=square",
   "email": "your.email@example.com",
   "resume": {
-    "label": "查看简历",
-    "href": "https://github.com/tuboshuk/resume"
+    "label": "下载简历",
+    "href": "/resume.pdf",
+    "download": true
   },
   "anchors": {
     "skills": "skills",
@@ -20,24 +21,26 @@
     "experience": "成长轨迹",
     "contact": "一起聊聊",
     "projects": "作品集",
-    "learning": "学习"
+    "learning": "学习",
+    "builder": "简历制作",
+    "blog": "博客"
   },
   "socials": [
-    { "label": "GitHub", "href": "https://github.com/tuboshuk" },
-    { "label": "Blog", "href": "https://github.com/tuboshuk" }
+    { "label": "GitHub", "href": "https://github.com/yourname" },
+    { "label": "Blog", "href": "https://your.blog.example" }
   ],
   "highlights": [
     {
-      "title": "工程化交付",
-      "desc": "把需求拆到可验收，产出文档、代码与可回滚方案。"
+      "title": "工程化交付与可观测性",
+      "desc": "能把模糊需求拆到可验收：从设计到上线闭环；会做限流/降级/重试、链路排障、告警与指标建设、灰度与回滚策略。"
     },
     {
-      "title": "稳定性治理",
-      "desc": "限流、降级、重试、可观测性与链路排障。"
+      "title": "制造业现场系统落地",
+      "desc": "6寸/8寸/12寸 MES/ERP 相关系统开发与交付：从服务器搭建、应用部署、现场联调跑通复杂流程，到 CI/CD 流水线、集成测试/单元测试、系统版本迭代与维护。"
     },
     {
-      "title": "AI 应用落地",
-      "desc": "面向企业协作场景的 Bot、流程与自动化集成。"
+      "title": "协作平台与自动化集成",
+      "desc": "面向企业协作场景做过飞书机器人与自动化集成，把流程做成可复用工具：标准化交付、SOP 文档沉淀、成本与风险可控。"
     }
   ],
   "skills": [
@@ -56,23 +59,42 @@
   ],
   "experience": [
     {
+      "slug": "bytedance-feishu",
       "title": "后端工程师",
       "org": "ByteDance / Feishu",
       "period": "2024 - Now",
+      "overview": "面向企业协作场景，负责飞书机器人与协作平台集成的工程落地与稳定性治理。",
+      "highlights": [
+        "负责关键链路的可观测性建设（日志/指标/链路），提升问题定位效率",
+        "推进多条端到端交付：需求澄清 → 技术方案 → 开发联调 → 上线复盘",
+        "沉淀可复用的自动化工具与工程模板，降低交付成本"
+      ],
       "bullets": [
         "负责飞书机器人与协作平台的集成落地与稳定性治理",
         "推进多条端到端交付：从需求澄清到上线闭环",
         "沉淀可复用的自动化工具与工程模板"
-      ]
+      ],
+      "stack": ["Go", "HTTP / Webhook", "Observability", "稳定性治理", "自动化"]
     },
     {
+      "slug": "glorysoft-mes-erp",
       "title": "后端工程师",
       "org": "GlorySoft",
       "period": "2021 - 2024",
+      "overview": "制造业现场系统研发与交付，覆盖 MES/ERP 相关业务流程，对接产线设备与消息中间件。",
+      "highlights": [
+        "参与 MES 系统开发与现场联调：对接制造芯片相关设备与产线数据",
+        "基于 ActiveMQ 设计与实现消息流转，处理异步任务与系统解耦",
+        "编写大量 MES 相关 SOP 文档，推动交付标准化与可复用"
+      ],
       "bullets": [
-        "参与制造业 MES 系统开发与现场联调",
-        "负责权限与复杂业务流程的工程实现"
-      ]
+        "参与 MES/ERP 相关系统的需求分析、开发实现与现场交付",
+        "对接产线设备与上下游系统：数据采集、工单/工艺流程与状态流转",
+        "使用 ActiveMQ 进行消息发布/订阅，支撑异步解耦与任务编排",
+        "负责权限、复杂业务流程与异常场景处理（补偿/重试/幂等）",
+        "沉淀现场交付 SOP 文档：部署、联调、回滚、故障排查与培训材料"
+      ],
+      "stack": ["Java", "Spring", "MySQL", "ActiveMQ", "MES", "ERP", "现场交付"]
     }
   ],
   "featuredProjectSlugs": ["resume-portfolio-generator", "feishu-bot-notifier", "worklog-digest"]

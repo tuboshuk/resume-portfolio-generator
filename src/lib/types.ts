@@ -9,10 +9,18 @@ export type SiteSkillGroup = {
 };
 
 export type SiteExperience = {
+  slug: string;
   title: string;
   org: string;
   period: string;
   bullets: string[];
+  highlights?: string[];
+  overview?: string;
+  stack?: string[];
+  links?: {
+    label: string;
+    href: string;
+  }[];
 };
 
 export type SiteSocial = {
@@ -38,6 +46,9 @@ export type SiteNavLabels = {
   contact?: string;
   projects?: string;
   learning?: string;
+  builder?: string;
+  blog?: string;
+  resume?: string;
 };
 
 export type SiteConfig = {
@@ -76,6 +87,16 @@ export type LearningNote = {
   date: string;
   tags: string[];
   links: LearningLink[];
+  featured: boolean;
+};
+
+export type BlogPost = {
+  slug: string;
+  title: string;
+  summary: string;
+  date: string;
+  tags: string[];
+  content: string;
   featured: boolean;
 };
 

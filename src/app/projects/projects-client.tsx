@@ -5,13 +5,15 @@ import { Container } from "@/components/Container";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Tag } from "@/components/Tag";
 import { filterProjects } from "@/lib/filter-projects";
-import { getAllTags, projects } from "@/lib/content";
+import { getAllTags, groupTags, projects, site } from "@/lib/content";
 import { cn } from "@/lib/cn";
 
 export function ProjectsClient() {
   const [query, setQuery] = useState("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  const allTags = useMemo(() => getAllTags(), []);
+  const groupedTags = useMemo(() => {
+    return groupTags(getAllTags(), site.skills);
+  }, []);
 
   const filtered = useMemo(() => {
     const out = filterProjects({ projects, query, selectedTags });
@@ -54,36 +56,45 @@ export function ProjectsClient() {
                   </button>
                 ) : null}
               </div>
-              <div className="flex flex-wrap gap-2">
-                {allTags.map((t) => {
-                  const active = selectedTags.includes(t);
-                  return (
-                    <button
-                      key={t}
-                      type="button"
-                      className={cn(
-                        "rounded-full transition-colors",
-                        active ? "bg-indigo-500/25" : "bg-transparent",
-                      )}
-                      onClick={() => {
-                        setSelectedTags((prev) =>
-                          prev.includes(t)
-                            ? prev.filter((x) => x !== t)
-                            : [...prev, t],
+              <div className="grid gap-4">
+                {groupedTags.map((g) => (
+                  <div key={g.group}>
+                    <div className="mb-2 text-[10px] font-bold uppercase tracking-wider text-white/40">
+                      {g.group}
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {g.items.map((t) => {
+                        const active = selectedTags.includes(t);
+                        return (
+                          <button
+                            key={t}
+                            type="button"
+                            className={cn(
+                              "rounded-full transition-colors",
+                              active ? "bg-indigo-500/25" : "bg-transparent",
+                            )}
+                            onClick={() => {
+                              setSelectedTags((prev) =>
+                                prev.includes(t)
+                                  ? prev.filter((x) => x !== t)
+                                  : [...prev, t],
+                              );
+                            }}
+                          >
+                            <Tag
+                              label={t}
+                              className={cn(
+                                active
+                                  ? "border-indigo-400/30 bg-indigo-500/20 text-white"
+                                  : undefined,
+                              )}
+                            />
+                          </button>
                         );
-                      }}
-                    >
-                      <Tag
-                        label={t}
-                        className={cn(
-                          active
-                            ? "border-indigo-400/30 bg-indigo-500/20 text-white"
-                            : undefined,
-                        )}
-                      />
-                    </button>
-                  );
-                })}
+                      })}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -103,7 +114,7 @@ export function ProjectsClient() {
           ) : (
             <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {filtered.map((p) => (
-                <ProjectCard key={p.slug} project={p} />
+                <ProjectCard key={p.slug} project={p} from="projects" />
               ))}
             </div>
           )}
