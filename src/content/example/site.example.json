@@ -1,0 +1,92 @@
+{
+  "name": "Alex Chen",
+  "title": "Full Stack Developer / Creative Technologist",
+  "location": "Shanghai, China",
+  "tagline": "Building digital products that solve real-world problems with elegance and efficiency.",
+  "description": "A showcase of my projects, skills, and learning journey. Built with Next.js and Tailwind CSS.",
+  "avatarUrl": "https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=professional%20developer%20portrait%20illustration%2C%20minimalist%20style%2C%20friendly%20expression%2C%20glasses%2C%20coding%20background%2C%20soft%20colors%2C%20high%20quality&image_size=square",
+  "email": "alex.chen@example.com",
+  "resume": {
+    "label": "Download Resume",
+    "href": "/resume-example.pdf",
+    "download": true
+  },
+  "anchors": {
+    "skills": "skills",
+    "experience": "experience",
+    "contact": "contact"
+  },
+  "nav": {
+    "skills": "My Skills",
+    "experience": "Experience",
+    "contact": "Contact",
+    "projects": "Projects",
+    "learning": "Learning"
+  },
+  "socials": [
+    { "label": "GitHub", "href": "https://github.com" },
+    { "label": "LinkedIn", "href": "https://linkedin.com" },
+    { "label": "Twitter", "href": "https://twitter.com" }
+  ],
+  "highlights": [
+    {
+      "title": "Full-Stack Development",
+      "desc": "Proficient in building end-to-end web applications using modern stacks like React, Node.js, and Go."
+    },
+    {
+      "title": "System Architecture",
+      "desc": "Experienced in designing scalable, reliable, and maintainable distributed systems."
+    },
+    {
+      "title": "Product Thinking",
+      "desc": "Strong focus on user experience and business value, bridging the gap between tech and product."
+    }
+  ],
+  "skills": [
+    {
+      "group": "Frontend",
+      "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]
+    },
+    {
+      "group": "Backend",
+      "items": ["Node.js", "Go", "Python", "PostgreSQL", "Redis", "Docker"]
+    },
+    {
+      "group": "Tools & Methods",
+      "items": ["Git", "CI/CD", "Agile", "System Design", "Cloud (AWS/GCP)"]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "org": "Tech Innovators Inc.",
+      "period": "2023 - Present",
+      "bullets": [
+        "Led the migration of legacy monolith to microservices, improving deployment frequency by 200%.",
+        "Mentored junior developers and established code review standards.",
+        "Designed and implemented a real-time collaboration feature for the core product."
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "org": "Creative Solutions Ltd.",
+      "period": "2021 - 2023",
+      "bullets": [
+        "Developed and maintained multiple client-facing web applications.",
+        "Optimized frontend performance, reducing LCP by 40%.",
+        "Collaborated with designers to implement responsive and accessible UIs."
+      ]
+    },
+    {
+      "title": "Junior Developer",
+      "org": "StartUp Hub",
+      "period": "2019 - 2021",
+      "bullets": [
+        "Assisted in building MVP features for early-stage startups.",
+        "Wrote unit and integration tests to ensure code quality.",
+        "Participated in agile ceremonies and sprint planning."
+      ]
+    }
+  ],
+  "featuredProjectSlugs": ["e-commerce-platform", "task-management-app", "portfolio-generator"]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "mastering-react-hooks",
+    "title": "Mastering React Hooks",
+    "summary": "Deep dive into useState, useEffect, and custom hooks with practical examples.",
+    "date": "2023-05-15",
+    "tags": ["React", "JavaScript", "Frontend"],
+    "links": [
+      { "label": "Read More", "href": "https://example.com/hooks" }
+    ],
+    "featured": true
+  },
+  {
+    "slug": "introduction-to-microservices",
+    "title": "Introduction to Microservices Architecture",
+    "summary": "Key concepts, benefits, and challenges of adopting microservices in enterprise.",
+    "date": "2023-04-10",
+    "tags": ["Architecture", "Backend", "Microservices"],
+    "links": [],
+    "featured": true
+  },
+  {
+    "slug": "typescript-advanced-types",
+    "title": "Advanced TypeScript Patterns",
+    "summary": "Understanding generics, mapped types, and conditional types for robust code.",
+    "date": "2023-03-22",
+    "tags": ["TypeScript", "Programming"],
+    "links": [
+      { "label": "Code Examples", "href": "https://github.com/example/ts-patterns" }
+    ],
+    "featured": false
+  },
+  {
+    "slug": "git-workflow-best-practices",
+    "title": "Git Workflow Best Practices",
+    "summary": "Effective branching strategies, commit messages, and code review processes.",
+    "date": "2023-02-05",
+    "tags": ["Git", "DevOps", "Workflow"],
+    "links": [],
+    "featured": false
+  }
+]

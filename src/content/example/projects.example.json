@@ -1,0 +1,99 @@
+[
+  {
+    "slug": "e-commerce-platform",
+    "title": "E-Commerce Platform",
+    "summary": "A full-featured online store with product catalog, cart, checkout, and admin dashboard.",
+    "period": "2023",
+    "role": "Full Stack Lead",
+    "tags": ["Next.js", "PostgreSQL", "Stripe", "Redis"],
+    "featured": true,
+    "links": [
+      { "label": "Demo", "href": "https://example.com/demo" },
+      { "label": "GitHub", "href": "https://github.com/example/repo" }
+    ],
+    "coverImageUrl": "https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=e-commerce%20website%20dashboard%2C%20modern%20clean%20design%2C%20charts%20and%20products%2C%20blue%20theme%2C%20high%20quality%20ui&image_size=landscape_4_3",
+    "content": {
+      "background": "The client needed a scalable e-commerce solution to handle high traffic during sales events.",
+      "responsibilities": [
+        "Architected the microservices backend for scalability.",
+        "Implemented secure payment processing integration with Stripe.",
+        "Built a responsive and performant frontend using Next.js."
+      ],
+      "results": [
+        "Successfully handled 10k+ concurrent users during launch.",
+        "Increased conversion rate by 15% through optimized checkout flow.",
+        "Reduced page load time to under 1.5s."
+      ],
+      "tradeoffs": [
+        "Chose PostgreSQL over NoSQL for strict transactional consistency.",
+        "Used server-side rendering for critical pages to boost SEO."
+      ]
+    },
+    "gallery": [
+      "https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=e-commerce%20product%20page%2C%20clean%20layout%2C%20buy%20button%2C%20reviews%2C%20high%20detail&image_size=landscape_4_3",
+      "https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=e-commerce%20admin%20panel%2C%20sales%20charts%2C%20order%20list%2C%20dark%20mode%2C%20professional&image_size=landscape_4_3"
+    ]
+  },
+  {
+    "slug": "task-management-app",
+    "title": "Task Management App",
+    "summary": "A collaborative task management tool for teams, featuring real-time updates and drag-and-drop boards.",
+    "period": "2022",
+    "role": "Frontend Developer",
+    "tags": ["React", "Firebase", "Tailwind CSS", "Drag & Drop"],
+    "featured": true,
+    "links": [
+      { "label": "Live App", "href": "https://example.com/app" }
+    ],
+    "coverImageUrl": "https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=kanban%20board%20app%20ui%2C%20colorful%20tags%2C%20drag%20and%20drop%2C%20collaboration%20features%2C%20modern%20interface&image_size=landscape_4_3",
+    "content": {
+      "background": "Remote teams needed a simple yet powerful tool to track project progress.",
+      "responsibilities": [
+        "Developed the drag-and-drop Kanban board interface.",
+        "Integrated real-time data synchronization using Firebase.",
+        "Designed a mobile-friendly layout for on-the-go access."
+      ],
+      "results": [
+        "Adopted by 5 internal teams within the first month.",
+        "Received positive feedback for intuitive UX and responsiveness.",
+        "Zero downtime during the first 6 months of operation."
+      ],
+      "tradeoffs": [
+        "Used Firebase for rapid development, accepting vendor lock-in as a tradeoff.",
+        "Prioritized core features over complex permissions for MVP."
+      ]
+    },
+    "gallery": []
+  },
+  {
+    "slug": "portfolio-generator",
+    "title": "Portfolio Generator",
+    "summary": "A static site generator for developers to showcase their work, built with performance and SEO in mind.",
+    "period": "2021",
+    "role": "Solo Developer",
+    "tags": ["Node.js", "Static Site Gen", "Markdown"],
+    "featured": false,
+    "links": [
+      { "label": "GitHub", "href": "https://github.com/example/generator" }
+    ],
+    "coverImageUrl": "https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=code%20editor%20screen%20with%20markdown%20preview%2C%20dark%20theme%2C%20coding%20environment%2C%20developer%20tools&image_size=landscape_4_3",
+    "content": {
+      "background": "Many developers struggle to build a portfolio from scratch. This tool simplifies the process.",
+      "responsibilities": [
+        "Designed the configuration schema for easy customization.",
+        "Implemented the build pipeline to generate optimized HTML.",
+        "Wrote comprehensive documentation and usage guides."
+      ],
+      "results": [
+        "Over 500 stars on GitHub.",
+        "Used by 100+ developers to build their personal sites.",
+        "Featured in 'Top Developer Tools' weekly newsletter."
+      ],
+      "tradeoffs": [
+        "Focused on developer experience (CLI) rather than a GUI.",
+        "Limited themes initially to ensure high quality of the default one."
+      ]
+    },
+    "gallery": []
+  }
+]
