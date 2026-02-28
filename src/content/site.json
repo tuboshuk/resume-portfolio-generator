@@ -6,7 +6,10 @@
   "description": "一个配置驱动的简历/作品集静态站点模板：填写资料 → 本地预览 → 一键构建部署。",
   "avatarUrl": "https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=professional%20headshot%20illustration%2C%20clean%20minimal%20vector%20portrait%2C%20soft%20lighting%2C%20dark%20background%2C%20modern%20tech%20aesthetic%2C%20high%20detail%2C%20sharp%20lines%2C%20calm%20expression%2C%20center%20composition&image_size=square",
   "email": "your.email@example.com",
-  "resumeHref": "https://github.com/tuboshuk/resume",
+  "resume": {
+    "label": "查看简历",
+    "href": "https://github.com/tuboshuk/resume"
+  },
   "anchors": {
     "skills": "skills",
     "experience": "experience",

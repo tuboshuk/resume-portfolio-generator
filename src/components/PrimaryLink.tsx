@@ -6,6 +6,7 @@ export function PrimaryLink(props: {
   label: string;
   variant?: "primary" | "secondary";
   external?: boolean;
+  download?: boolean;
   className?: string;
 }) {
   const base =
@@ -32,10 +33,17 @@ export function PrimaryLink(props: {
     );
   }
 
+  if (props.download) {
+    return (
+      <a className={className} href={props.href} download>
+        {props.label}
+      </a>
+    );
+  }
+
   return (
     <Link className={className} href={props.href}>
       {props.label}
     </Link>
   );
 }
-

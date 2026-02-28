@@ -18,6 +18,35 @@ npm run dev
 
 你只需要改这两个文件，就能生成属于你的站点。
 
+### Resume (View / Download)
+
+你可以在 `src/content/site.json` 里配置简历入口：
+
+```json
+{
+  "resume": {
+    "label": "下载简历",
+    "href": "/resume.pdf",
+    "download": true
+  }
+}
+```
+
+把你的 PDF 放到 `public/resume.pdf` 即可（静态导出可用）。
+
+### Skills
+
+技能支持按分组配置，直接编辑 `site.json` 的 `skills`：
+
+```json
+{
+  "skills": [
+    { "group": "Backend", "items": ["Go", "MySQL", "Redis"] },
+    { "group": "Frontend", "items": ["React", "TypeScript"] }
+  ]
+}
+```
+
 ### Anchor IDs (URL #hash)
 
 首页导航使用锚点滚动，默认会显示 `/#skills` 这种地址，这是页面 section 的 `id`。你可以在 `src/content/site.json` 里用 `anchors` 自定义：

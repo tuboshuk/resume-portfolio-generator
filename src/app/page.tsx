@@ -14,6 +14,21 @@ export default function Home() {
     experience: site.anchors?.experience ?? "experience",
     contact: site.anchors?.contact ?? "contact",
   };
+  const resume =
+    site.resume?.href
+      ? {
+          href: site.resume.href,
+          label: site.resume.label ?? "查看简历",
+          download: site.resume.download === true,
+        }
+      : site.resumeHref
+        ? {
+            href: site.resumeHref,
+            label: "查看简历",
+            download: false,
+          }
+        : null;
+  const resumeIsExternal = resume ? /^https?:\/\//.test(resume.href) : false;
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-50">
@@ -37,12 +52,15 @@ export default function Home() {
                 </p>
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                   <PrimaryLink href="/projects" label="查看作品" />
-                  <PrimaryLink
-                    href={site.resumeHref}
-                    label="查看简历"
-                    variant="secondary"
-                    external
-                  />
+                  {resume ? (
+                    <PrimaryLink
+                      href={resume.href}
+                      label={resume.label}
+                      variant="secondary"
+                      external={resumeIsExternal}
+                      download={!resumeIsExternal && resume.download}
+                    />
+                  ) : null}
                 </div>
                 <div className="mt-8 flex flex-wrap gap-2">
                   {site.skills.flatMap((g) => g.items).slice(0, 10).map((t) => (
