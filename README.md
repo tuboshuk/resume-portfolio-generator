@@ -17,7 +17,7 @@ npm run dev
 - 作品列表：`src/content/projects.json`
 - 学习记录：`src/content/learning.json`
 
-你只需要改这两个文件，就能生成属于你的站点。
+你只需要改这些内容文件，就能生成属于你的站点。
 
 ### Resume (View / Download)
 
@@ -98,6 +98,10 @@ npm test
 
 - MVP Review Checklist: `docs/review/iteration-0-mvp-review.md`
 - Iteration 1 Candidates: `docs/backlog/iteration-1-candidates.md`
+
+## Manual
+
+- Pages & Business Logic: `docs/manual/pages-and-business-logic.md`
 
 ## Getting Started
 
