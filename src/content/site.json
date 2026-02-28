@@ -15,6 +15,13 @@
     "experience": "experience",
     "contact": "contact"
   },
+  "nav": {
+    "skills": "我的优势",
+    "experience": "成长轨迹",
+    "contact": "一起聊聊",
+    "projects": "作品集",
+    "learning": "学习"
+  },
   "socials": [
     { "label": "GitHub", "href": "https://github.com/tuboshuk" },
     { "label": "Blog", "href": "https://github.com/tuboshuk" }

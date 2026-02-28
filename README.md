@@ -62,6 +62,22 @@ npm run dev
 }
 ```
 
+### Navigation Labels
+
+导航文案可以在 `src/content/site.json` 里配置（不影响锚点地址）：
+
+```json
+{
+  "nav": {
+    "skills": "我的优势",
+    "experience": "成长轨迹",
+    "contact": "一起聊聊",
+    "projects": "作品集",
+    "learning": "学习"
+  }
+}
+```
+
 ## Build (Static Export)
 
 ```bash

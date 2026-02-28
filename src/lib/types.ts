@@ -32,6 +32,14 @@ export type SiteAnchors = {
   contact?: string;
 };
 
+export type SiteNavLabels = {
+  skills?: string;
+  experience?: string;
+  contact?: string;
+  projects?: string;
+  learning?: string;
+};
+
 export type SiteConfig = {
   name: string;
   title: string;
@@ -43,6 +51,7 @@ export type SiteConfig = {
   resumeHref?: string;
   resume?: SiteResume;
   anchors?: SiteAnchors;
+  nav?: SiteNavLabels;
   socials: SiteSocial[];
   highlights: SiteHighlight[];
   skills: SiteSkillGroup[];
