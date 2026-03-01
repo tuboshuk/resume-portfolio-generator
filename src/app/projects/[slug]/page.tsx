@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/Container";
+import { PlainImage } from "@/components/PlainImage";
 import { PrimaryLink } from "@/components/PrimaryLink";
 import { ProjectBackButton } from "@/components/ProjectBackButton";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -39,11 +40,7 @@ export default async function ProjectDetailPage(props: { params: Promise<{ slug:
                   ))}
                 </div>
                 <div className="mt-7 aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-white/5">
-                  <img
-                    alt={p.title}
-                    src={p.coverImageUrl}
-                    className="h-full w-full object-cover"
-                  />
+                  <PlainImage alt={p.title} src={p.coverImageUrl} width={1200} height={900} className="h-full w-full object-cover" />
                 </div>
               </div>
 
@@ -136,12 +133,7 @@ export default async function ProjectDetailPage(props: { params: Promise<{ slug:
                           key={src}
                           className="aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-white/5"
                         >
-                          <img
-                            alt={p.title}
-                            src={src}
-                            className="h-full w-full object-cover"
-                            loading="lazy"
-                          />
+                          <PlainImage alt={p.title} src={src} width={1200} height={900} className="h-full w-full object-cover" />
                         </div>
                       ))}
                     </div>

@@ -17,7 +17,10 @@ export default async function ExperienceDetailPage(props: { params: Promise<{ sl
   const e = site.experience.find((x) => x.slug === slug);
   if (!e) return notFound();
 
+  const basePathRaw = (process.env.NEXT_PUBLIC_BASE_PATH ?? "").replace(/\/$/, "");
+  const basePath = basePathRaw ? (basePathRaw.startsWith("/") ? basePathRaw : `/${basePathRaw}`) : "";
   const experienceAnchor = site.anchors?.experience ?? "experience";
+  const homeExperienceHref = `${basePath}/#${experienceAnchor}`;
   const highlights = e.highlights?.length ? e.highlights : e.bullets;
 
   return (
@@ -53,7 +56,7 @@ export default async function ExperienceDetailPage(props: { params: Promise<{ sl
                 <div className="text-xs font-semibold text-white/60">快速操作</div>
                 <div className="mt-4 grid gap-2">
                   <PrimaryLink
-                    href={`/#${experienceAnchor}`}
+                    href={homeExperienceHref}
                     label={site.nav?.experience ?? "返回成长轨迹"}
                     variant="secondary"
                     className="w-full justify-center"

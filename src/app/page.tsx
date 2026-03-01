@@ -3,6 +3,7 @@ import { Container } from "@/components/Container";
 import { CopyButton } from "@/components/CopyButton";
 import { PrimaryLink } from "@/components/PrimaryLink";
 import { ProjectCard } from "@/components/ProjectCard";
+import { PlainImage } from "@/components/PlainImage";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Tag } from "@/components/Tag";
@@ -75,11 +76,7 @@ export default function Home() {
                 <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/5 p-6">
                   <div className="flex items-center gap-4">
                     <div className="h-16 w-16 overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-                      <img
-                        alt={site.name}
-                        src={site.avatarUrl}
-                        className="h-full w-full object-cover"
-                      />
+                      <PlainImage alt={site.name} src={site.avatarUrl} width={64} height={64} className="h-full w-full object-cover" />
                     </div>
                     <div>
                       <div className="text-sm font-semibold">{site.name}</div>
@@ -177,7 +174,7 @@ export default function Home() {
                     <div className="text-sm font-semibold text-white/55">{e.period}</div>
                   </div>
                   <ul className="mt-4 grid gap-2 text-sm text-white/70">
-                    {(e.highlights?.length ? e.highlights : e.bullets).slice(0, 3).map((b) => (
+                    {(e.highlights?.length ? e.highlights : e.bullets).slice(0, 5).map((b) => (
                       <li key={b} className="leading-6">
                         · {b}
                       </li>

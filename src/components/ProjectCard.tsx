@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Project } from "@/lib/types";
 import { Tag } from "@/components/Tag";
+import { PlainImage } from "@/components/PlainImage";
 
 export function ProjectCard(props: { project: Project; from?: string }) {
   const p = props.project;
@@ -11,11 +12,12 @@ export function ProjectCard(props: { project: Project; from?: string }) {
       className="group block overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-all hover:-translate-y-0.5 hover:border-white/15 hover:bg-white/7"
     >
       <div className="aspect-[4/3] w-full overflow-hidden bg-white/5">
-        <img
+        <PlainImage
           alt={p.title}
           src={p.coverImageUrl}
+          width={800}
+          height={600}
           className="h-full w-full object-cover opacity-95 transition-transform duration-300 group-hover:scale-[1.03]"
-          loading="lazy"
         />
       </div>
       <div className="p-5">

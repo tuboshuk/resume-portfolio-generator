@@ -2,10 +2,11 @@ import projectsJson from "@/content/projects.json";
 import siteJson from "@/content/site.json";
 import learningJson from "@/content/learning.json";
 import type { LearningNote, Project, SiteConfig } from "@/lib/types";
+import { validateLearning, validateProjects, validateSiteConfig } from "@/lib/validate-content";
 
-export const site = siteJson as SiteConfig;
-export const projects = projectsJson as Project[];
-export const learning = learningJson as LearningNote[];
+export const site = validateSiteConfig(siteJson, "src/content/site.json") as SiteConfig;
+export const projects = validateProjects(projectsJson, "src/content/projects.json") as Project[];
+export const learning = validateLearning(learningJson, "src/content/learning.json") as LearningNote[];
 
 export function getProjectBySlug(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug);

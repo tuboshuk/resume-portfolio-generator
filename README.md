@@ -1,8 +1,10 @@
-## Resume / Portfolio Generator Template
+## 可部署的静态作品集模板（Next.js）
 
-输入本地配置与内容文件，输出可部署的静态作品集站点（支持 `/`、`/projects`、`/projects/[slug]`）。
+配置 `src/content/*.json`，输出可部署的静态站点（支持首页、作品集列表/详情、学习列表、经历详情、sitemap）。
 
-## Quick Start
+![demo](./docs/demo.svg)
+
+## 1 分钟跑起来
 
 ```bash
 npm install
@@ -11,139 +13,49 @@ npm run dev
 
 打开 `http://localhost:3000` 预览。
 
-## Content Editing
+## 内容编辑（只改这 3 个文件）
 
 - 站点信息：`src/content/site.json`
 - 作品列表：`src/content/projects.json`
 - 学习记录：`src/content/learning.json`
 
-你只需要改这些内容文件，就能生成属于你的站点。
-
-### Resume (View / Download)
-
-你可以在 `src/content/site.json` 里配置简历入口：
+建议在 `site.json` 补齐部署域名（用于 sitemap/SEO）：
 
 ```json
 {
-  "resume": {
-    "label": "下载简历",
-    "href": "/resume.pdf",
-    "download": true
-  }
+  "siteUrl": "https://your-domain.com"
 }
 ```
 
-把你的 PDF 放到 `public/resume.pdf` 即可（静态导出可用）。
+### 简历下载（PDF）
 
-### Skills
-
-技能支持按分组配置，直接编辑 `site.json` 的 `skills`：
+把你的 PDF 放到 `public/resume.pdf`，并在 `site.json` 配置入口：
 
 ```json
 {
-  "skills": [
-    { "group": "Backend", "items": ["Go", "MySQL", "Redis"] },
-    { "group": "Frontend", "items": ["React", "TypeScript"] }
-  ]
+  "resume": { "label": "下载简历", "href": "/resume.pdf", "download": true }
 }
 ```
 
-### Anchor IDs (URL #hash)
-
-首页导航使用锚点滚动，默认会显示 `/#skills` 这种地址，这是页面 section 的 `id`。你可以在 `src/content/site.json` 里用 `anchors` 自定义：
-
-```json
-{
-  "anchors": {
-    "skills": "abilities",
-    "experience": "timeline",
-    "contact": "contact"
-  }
-}
-```
-
-### Navigation Labels
-
-导航文案可以在 `src/content/site.json` 里配置（不影响锚点地址）：
-
-```json
-{
-  "nav": {
-    "skills": "我的优势",
-    "experience": "成长轨迹",
-    "contact": "一起聊聊",
-    "projects": "作品集",
-    "learning": "学习"
-  }
-}
-```
-
-## Sitemap
-
-站点地图 `sitemap.xml` 会在 `npm run build` 时自动生成。
-
-请修改 `src/app/sitemap.ts` 中的 `baseUrl` 为你的实际部署域名：
-
-```typescript
-const baseUrl = "https://your-portfolio-url.com";
-```
-
-## Build (Static Export)
+## 构建（静态导出）
 
 ```bash
 npm run build
 ```
 
-构建完成后会生成静态导出目录 `out/`，可直接部署到任意静态托管平台。
+构建产物在 `out/`，可直接部署到任意静态托管平台。
 
-## Checks
+## 一键部署（GitHub Pages，推荐）
 
-```bash
-npm run lint
-npm run typecheck
-npm test
-```
+本仓库自带 GitHub Pages 工作流：push 后自动构建 `out/` 并发布。
 
-## Team Review
+1. Fork 该仓库到你的 GitHub
+2. 在仓库 Settings → Pages 中，Source 选择 GitHub Actions
+3. 修改 `src/content/site.json` 的 `siteUrl`，设置为：
+   - `https://<你的用户名>.github.io/<仓库名>`
+4. 推送到 `main`，等待 Actions 完成部署
 
-- MVP Review Checklist: `docs/review/iteration-0-mvp-review.md`
-- Iteration 1 Candidates: `docs/backlog/iteration-1-candidates.md`
+## 常见问题
 
-## Manual
-
-- Pages & Business Logic: `docs/manual/pages-and-business-logic.md`
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 静态导出开启了 `trailingSlash`：站内链接统一使用 `/projects/` 这种带尾斜杠的路径，静态托管更稳定。
+- 内容文件字段不对会在构建阶段报错：错误信息包含字段路径与修复提示（便于快速定位）。

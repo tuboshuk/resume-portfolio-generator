@@ -4,7 +4,11 @@ import { projects, site } from "@/lib/content";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://your-portfolio-url.com").replace(/\/$/, "");
+  const baseUrl = (
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    site.siteUrl ??
+    "https://your-portfolio-url.com"
+  ).replace(/\/$/, "");
 
   const routes = [
     "/",

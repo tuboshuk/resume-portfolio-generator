@@ -50,6 +50,7 @@ export type SiteNavLabels = {
 };
 
 export type SiteConfig = {
+  siteUrl?: string;
   name: string;
   title: string;
   location: string;
