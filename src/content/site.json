@@ -4,7 +4,7 @@
   "location": "Shanghai, CN",
   "tagline": "从制造业现场到企业协作平台：能写业务也能抓稳定性。",
   "description": "配置驱动的简历/作品集站点：内容可维护、结构可复用、支持静态导出与一键部署。",
-  "avatarUrl": "https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=professional%20headshot%20illustration%2C%20clean%20minimal%20vector%20portrait%2C%20soft%20lighting%2C%20dark%20background%2C%20modern%20tech%20aesthetic%2C%20high%20detail%2C%20sharp%20lines%2C%20calm%20expression%2C%20center%20composition&image_size=square",
+  "avatarUrl": "/avatar.svg",
   "email": "your.email@example.com",
   "resume": {
     "label": "下载简历",
@@ -22,12 +22,10 @@
     "contact": "一起聊聊",
     "projects": "作品集",
     "learning": "学习",
-    "builder": "简历制作",
-    "blog": "博客"
+    "resume": "下载简历"
   },
   "socials": [
-    { "label": "GitHub", "href": "https://github.com/yourname" },
-    { "label": "Blog", "href": "https://your.blog.example" }
+    { "label": "GitHub", "href": "https://github.com/yourname" }
   ],
   "highlights": [
     {

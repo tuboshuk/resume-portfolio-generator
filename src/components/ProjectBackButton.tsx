@@ -20,7 +20,7 @@ export function ProjectBackButton() {
 
   return (
     <PrimaryLink
-      href="/projects"
+      href="/projects/"
       label="返回作品集"
       variant="secondary"
       className="w-full justify-center"

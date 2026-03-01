@@ -155,7 +155,7 @@ export default async function ProjectDetailPage(props: { params: Promise<{ slug:
                   <Suspense
                     fallback={
                       <PrimaryLink
-                        href="/projects"
+                        href="/projects/"
                         label="返回作品集"
                         variant="secondary"
                         className="w-full justify-center"

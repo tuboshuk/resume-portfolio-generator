@@ -46,8 +46,6 @@ export type SiteNavLabels = {
   contact?: string;
   projects?: string;
   learning?: string;
-  builder?: string;
-  blog?: string;
   resume?: string;
 };
 
@@ -87,16 +85,6 @@ export type LearningNote = {
   date: string;
   tags: string[];
   links: LearningLink[];
-  featured: boolean;
-};
-
-export type BlogPost = {
-  slug: string;
-  title: string;
-  summary: string;
-  date: string;
-  tags: string[];
-  content: string;
   featured: boolean;
 };
 

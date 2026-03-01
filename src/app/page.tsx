@@ -52,7 +52,7 @@ export default function Home() {
                   {site.tagline}
                 </p>
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                  <PrimaryLink href="/projects" label="查看作品" />
+                  <PrimaryLink href="/projects/" label="查看作品" />
                   {resume ? (
                     <PrimaryLink
                       href={resume.href}
@@ -123,7 +123,7 @@ export default function Home() {
                 </p>
               </div>
               <PrimaryLink
-                href="/projects"
+                  href="/projects/"
                 label="全部作品"
                 variant="secondary"
                 className="hidden sm:inline-flex"
@@ -166,7 +166,7 @@ export default function Home() {
               {site.experience.map((e) => (
                 <Link
                   key={e.slug}
-                  href={`/experience/${e.slug}`}
+                  href={`/experience/${e.slug}/`}
                   className="block rounded-3xl border border-white/10 bg-white/5 p-6 transition-colors hover:bg-white/7"
                 >
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
@@ -199,7 +199,7 @@ export default function Home() {
                 </p>
               </div>
               <PrimaryLink
-                href="/projects"
+                href="/projects/"
                 label="查看全部"
                 variant="secondary"
                 className="hidden sm:inline-flex"

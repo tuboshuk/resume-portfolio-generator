@@ -7,7 +7,7 @@ export function ProjectCard(props: { project: Project; from?: string }) {
 
   return (
     <Link
-      href={`/projects/${p.slug}${props.from ? `?from=${props.from}` : ""}`}
+      href={`/projects/${p.slug}/${props.from ? `?from=${props.from}` : ""}`}
       className="group block overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-all hover:-translate-y-0.5 hover:border-white/15 hover:bg-white/7"
     >
       <div className="aspect-[4/3] w-full overflow-hidden bg-white/5">
@@ -35,4 +35,3 @@ export function ProjectCard(props: { project: Project; from?: string }) {
     </Link>
   );
 }
-

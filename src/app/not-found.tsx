@@ -16,7 +16,7 @@ export default function NotFound() {
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
               <PrimaryLink href="/" label="返回首页" variant="secondary" />
-              <PrimaryLink href="/projects" label="查看作品集" />
+              <PrimaryLink href="/projects/" label="查看作品集" />
             </div>
           </div>
         </Container>
@@ -25,4 +25,3 @@ export default function NotFound() {
     </div>
   );
 }
-
